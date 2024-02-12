@@ -28,14 +28,13 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ToDayH
     @Override
 
 
-
     public ToDayHolder onCreateViewHolder(@NonNull ViewGroup parent, int viewType) {
-        return new ToDayHolder(LayoutInflater.from(context).inflate(R.layout.cardtoday,parent,false));
+        return new ToDayHolder(LayoutInflater.from(context).inflate(R.layout.cardtoday, parent, false));
     }
 
     @Override
     public void onBindViewHolder(@NonNull ToDayHolder holder, int position) {
-     holder.bind(list.get(position));
+        holder.bind(list.get(position));
     }
 
     @Override
@@ -43,14 +42,14 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ToDayH
         return list.size();
     }
 
-    public class ToDayHolder extends RecyclerView.ViewHolder{
-      private CardView cardView;
-      private TextView textView,textView2;
+    public class ToDayHolder extends RecyclerView.ViewHolder {
+        private CardView cardView;
+        private TextView textView, textView2;
 
         public ToDayHolder(@NonNull View itemView) {
             super(itemView);
-            textView=itemView.findViewById(R.id.text);
-            textView2=itemView.findViewById(R.id.text2);
+            textView = itemView.findViewById(R.id.text);
+            textView2 = itemView.findViewById(R.id.text2);
         }
 
         public void bind(ToDay item) {
@@ -59,11 +58,7 @@ public class RecyclerAdapter extends RecyclerView.Adapter<RecyclerAdapter.ToDayH
         }
 
 
-
     }
-
-
-
 
 
 }
